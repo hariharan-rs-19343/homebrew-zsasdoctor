@@ -6,9 +6,8 @@ class Zsasdoctor < Formula
   license "MIT"
 
   def install
-    bin.install "bin/zsasdoctor"
-    lib.install Dir["lib/*"]
-    (prefix/"config").install Dir["config/*"]
+    libexec.install Dir["*"]
+    bin.write_exec_script libexec/"bin/zsasdoctor"
   end
 
   test do
