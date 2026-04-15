@@ -8,7 +8,7 @@ class Zsasdoctor < Formula
   def install
     bin.install "bin/zsasdoctor"
     lib.install Dir["lib/*"]
-    (etc/"zsasdoctor").install Dir["config/*"]
+    (prefix/"config").install Dir["config/*"]
   end
 
   test do
